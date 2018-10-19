@@ -136,7 +136,7 @@ body p {
 }
 
 @media print {
-  body[data-theme="${theme}"] {
+  [data-theme="${theme}"] {
     color: #000;
     background-color: #fff;
   }

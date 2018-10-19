@@ -82,7 +82,7 @@
   &:before
     content: "\f142 \f142"
 
-body[data-theme="white"]
+[data-theme="white"]
   .folderList-item
     color $ui-inactive-text-color
     &:hover
@@ -101,7 +101,7 @@ body[data-theme="white"]
       color $ui-text-color
       background-color alpha($ui-button--active-backgroundColor, 50%)
 
-body[data-theme="dark"]
+[data-theme="dark"]
   .folderList-item
     &:hover
       background-color alpha($ui-dark-button--active-backgroundColor, 20%)
@@ -120,7 +120,7 @@ body[data-theme="dark"]
       color $ui-dark-text-color
       background-color alpha($ui-dark-button--active-backgroundColor, 50%)
 
-body[data-theme="solarized-dark"]
+[data-theme="solarized-dark"]
   .folderList-item
     &:hover
       background-color $ui-solarized-dark-button-backgroundColor
@@ -139,7 +139,7 @@ body[data-theme="solarized-dark"]
       color $ui-solarized-dark-text-color
       background-color $ui-solarized-dark-button-backgroundColor
 
-body[data-theme="monokai"]
+[data-theme="monokai"]
   .folderList-item
     &:hover
       background-color $ui-monokai-button-backgroundColor
@@ -158,7 +158,7 @@ body[data-theme="monokai"]
       color $ui-monokai-text-color
       background-color $ui-monokai-button-backgroundColor
 
-body[data-theme="dracula"]
+[data-theme="dracula"]
   .folderList-item
     &:hover
       background-color $ui-dracula-button-backgroundColor

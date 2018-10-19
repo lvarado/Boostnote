@@ -141,17 +141,17 @@ function set (updates) {
   _save(newConfig)
 
   if (newConfig.ui.theme === 'dark') {
-    document.body.setAttribute('data-theme', 'dark')
+    document.documentElement.setAttribute('data-theme', 'dark')
   } else if (newConfig.ui.theme === 'white') {
-    document.body.setAttribute('data-theme', 'white')
+    document.documentElement.setAttribute('data-theme', 'white')
   } else if (newConfig.ui.theme === 'solarized-dark') {
-    document.body.setAttribute('data-theme', 'solarized-dark')
+    document.documentElement.setAttribute('data-theme', 'solarized-dark')
   } else if (newConfig.ui.theme === 'monokai') {
-    document.body.setAttribute('data-theme', 'monokai')
+    document.documentElement.setAttribute('data-theme', 'monokai')
   } else if (newConfig.ui.theme === 'dracula') {
-    document.body.setAttribute('data-theme', 'dracula')
+    document.documentElement.setAttribute('data-theme', 'dracula')
   } else {
-    document.body.setAttribute('data-theme', 'default')
+    document.documentElement.setAttribute('data-theme', 'default')
   }
 
   i18n.setLocale(newConfig.ui.language)

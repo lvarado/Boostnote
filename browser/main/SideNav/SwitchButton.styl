@@ -31,7 +31,7 @@
   transition 0.1s
   white-space nowrap
 
-body[data-theme="white"]
+[data-theme="white"]
   .non-active-button
     color $ui-inactive-text-color
     &:hover
@@ -49,7 +49,7 @@ body[data-theme="white"]
     @extend .non-active-button
     color #0B99F1
 
-body[data-theme="dark"]
+[data-theme="dark"]
   .non-active-button
     color alpha($ui-dark-text-color, 60%)
     &:hover

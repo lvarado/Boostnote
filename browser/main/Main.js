@@ -144,9 +144,9 @@ class Main extends React.Component {
     const supportedThemes = ['dark', 'white', 'solarized-dark', 'monokai', 'dracula']
 
     if (supportedThemes.indexOf(config.ui.theme) !== -1) {
-      document.body.setAttribute('data-theme', config.ui.theme)
+      document.documentElement.setAttribute('data-theme', config.ui.theme)
     } else {
-      document.body.setAttribute('data-theme', 'default')
+      document.documentElement.setAttribute('data-theme', 'default')
     }
 
     if (getLocales().indexOf(config.ui.language) !== -1) {
