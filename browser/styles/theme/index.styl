@@ -1,0 +1,10 @@
+$themes = default
+
+for theme in $themes
+  @import theme
+  :root[data-theme={theme}]
+    for name, value in $color
+      {'--color-' + name}: rgba(value)
+
+    for name, value in $layout
+      {'--layout-' + name}: value

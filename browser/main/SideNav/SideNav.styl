@@ -1,9 +1,9 @@
 .root
   absolute top left bottom
-  width $sideNav-width
+  width var(--layout-sideNav-width)
   background-color #2E3235
   user-select none
-  color $ui-text-color
+  color var(--color-ui-text)
   height: 100vh
   display: flex
   flex-direction column
@@ -40,17 +40,17 @@
     padding-bottom 13px
     flex 1
     p
-      color $ui-button-default-color
+      color var(--color-ui-button-default)
   .tag-control-sortTagsBy
     user-select none
     font-size 12px
-    color $ui-inactive-text-color
+    color var(--color-ui-inactive-text)
     margin-left 12px
     margin-right 12px
     .tag-control-sortTagsBy-select
       appearance: none;
       margin-left 5px
-      color $ui-inactive-text-color
+      color var(--color-ui-inactive-text)
       padding 0
       border none
       background-color transparent
@@ -64,7 +64,7 @@
 
 .root--folded
   height 100vh
-  width $sideNav--folded-width
+  width var(--layout-sideNav--folded-width)
   background-color #2E3235
   .switch-buttons
     display none
@@ -72,7 +72,7 @@
     height 60px
   .top-menu
     position static
-    width $sideNav--folded-width
+    width var(--layout-sideNav--folded-width)
     height 60px
     text-align center
     &:hover .top-menu-label
@@ -82,7 +82,7 @@
     position fixed
     display inline-block
     height 30px
-    left $sideNav--folded-width
+    left var(--layout-sideNav--folded-width)
     padding 0 10px
     margin-top -8px
     opacity 0

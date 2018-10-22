@@ -1,3 +1,5 @@
+@import './theme'
+
 // Default theme
 $brand-color = #6AA5E9
 
@@ -36,9 +38,9 @@ $ui-tooltip-button--hover-backgroundColor = lighten(#D1D1D1, 30%)
 $ui-tooltip-font-size = 12px
 
 tooltip()
-  background-color $ui-tooltip-backgroundColor = alpha(#444, 70%)
-  color $ui-tooltip-text-color = white
-  font-size $ui-tooltip-font-size
+  background-color var(--color-ui-tooltip-background)
+  color var(--color-ui-tooltip-text)
+  font-size var(--layout-ui-tooltip-font-size)
   pointer-events none
   transition 0.1s
 
@@ -71,12 +73,12 @@ $default-button-background--hover = #e6e6e6
 $default-button-background--active = #D9D9D9
 
 colorDefaultButton()
-  background-color $default-button-background
+  background-color var(--color-default-button-background)
   &:hover
     background-color transparent
   &:active
   &:active:hover
-    background-color $default-button-background--active
+    background-color var(--color-default-button-background--active)
 
 // Primary button(Brand color)
 $primary-button-background = alpha($brand-color, 60%)
@@ -84,14 +86,14 @@ $primary-button-background--hover = darken($brand-color, 5%)
 $primary-button-background--active = darken($brand-color, 10%)
 
 colorPrimaryButton()
-  color $ui-text-color
-  background-color $default-button-background--hover
+  color var(--color-ui-text)
+  background-color var(--color-primary-button-background--hover)
   &:hover
     transition 0.2s
-    background-color $default-button-background--active
+    background-color var(--color-primary-button-background--active)
   &:active
   &:active:hover
-    background-color $default-button-background--active
+    background-color var(--color-primary-button-background--active)
 
 // Dark Primary button(Brand color)
 $dark-primary-button-background = alpha(#3A404C, 80%)
@@ -146,26 +148,30 @@ $danger-button-background--active = darken(#c9302c, 10%)
 
 colorDangerButton()
   color white
-  background-color $danger-button-background
+  background-color var(--color-danger-button-background)
   &:hover
-    background-color $danger-button-background--hover
+    background-color var(--color-danger-button-background--hover)
   &:active
   &:active:hover
-    background-color $danger-button-background--active
+    background-color var(--color-danger-button-background--active)
 
 /**
 * SideNav
 */
 SideNavFilter()
-  background-color $ui-button-default--active-backgroundColor
+  background-color var(--color-ui-button-default--active-background)
   .counters
-    color $ui-button-default-color
+    color var(--color-ui-button-default)
   .menu-button-label
-    color $ui-button-default-color
+    color var(--color-ui-button-default)
   &:hover
-    background-color alpha($ui-button-default--hover-backgroundColor, 20%)
+    // FIXME:
+    // background-color alpha($ui-button-default--hover-backgroundColor, 20%)
+    background-color var(--color-ui-button-default--hover-background)
   &:active, &:active:hover
-    background-color alpha($ui-button-default--hover-backgroundColor, 20%)
+    // FIXME:
+    // background-color alpha(var(--ui-button-default--hover-backgroundColor), 20%)
+    background-color var(--color-ui-button-default--hover-background)
     .menu-button-label
       color #1EC38B
 
@@ -175,14 +181,14 @@ SideNavFilter()
 
 navButtonColor()
   border none
-  color $ui-button-color
+  color var(--color-ui-button)
   background-color transparent
   transition 0.15s
   &:hover
     transition  0.15s
-    color $ui-button-default-color
+    color var(--color-ui-button-default)
   &:active, &:active:hover
-    color $ui-button-default-color
+    color var(--color-ui-button-default)
     transition 0.15s
 
 /**
@@ -197,15 +203,15 @@ $modal-border-radius = 5px
 
 modal()
   position relative
-  z-index $modal-z-index
+  z-index var(--layout-modal-z-index)
   width 100%
   margin-left 80px
   margin-right 80px
   margin-bottom 80px
   margin-top 100px
-  background-color $modal-background
+  background-color var(--color-modal-background)
   overflow hidden
-  border-radius $modal-border-radius
+  border-radius var(--layout-modal-border-radius)
 
 topBarButtonRight()
   width 34px
@@ -213,15 +219,17 @@ topBarButtonRight()
   border-radius 17px
   font-size 14px
   border none
-  color alpha($ui-button-color, 0.2)
-  fill $ui-button-color
+  // FIXME:
+  // color alpha(var(--ui-button-color), 0.2)
+  color var(--color-ui-button)
+  fill var(--color-ui-button)
   background-color transparent
   &:active
-    border-color $ui-button--active-backgroundColor
+    border-color var(--color-ui-button--active-background)
   &:hover
     // transform scale(1.1)
     transition 0.4s
-    color $ui-button-color
+    color var(--color-ui-button)
     .control-lockButton-tooltip
       opacity 1
 
@@ -234,16 +242,18 @@ $ui-white-noteDetail-backgroundColor = #F4F4F4
 */
 navWhiteButtonColor()
   border none
-  color $ui-button-color
+  color var(--color-ui-button)
   background-color transparent
   transition 0.15s
   &:hover
-    background-color alpha($ui-button--active-backgroundColor, 20%)
+    // FIXME:
+    // background-color alpha(var(--ui-button--active-backgroundColor), 20%)
+    background-color var(--color-ui-button--active-background)
     transition  0.15s
-    color $ui-text-color
+    color var(--color-ui-text)
   &:active, &:active:hover
-    background-color $ui-button--active-backgroundColor
-    color $ui-text-color
+    background-color var(--color-ui-button--active-background)
+    color var(--color-ui-text)
     transition 0.15s
 
 // UI Button
