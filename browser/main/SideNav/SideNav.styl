@@ -1,7 +1,7 @@
 .root
   absolute top left bottom
   width var(--layout-sideNav-width)
-  background-color #2E3235
+  background-color var(--color-sideNav-background)
   user-select none
   color var(--color-ui-text)
   height: 100vh
@@ -65,7 +65,7 @@
 .root--folded
   height 100vh
   width var(--layout-sideNav--folded-width)
-  background-color #2E3235
+  background-color var(--color-sideNav-background)
   .switch-buttons
     display none
   .top
@@ -98,11 +98,6 @@
   .top-menu-preference
     position absolute
     left 7px
-
-[data-theme="white"]
-  .root, .root--folded
-    background-color #f9f9f9
-    color $ui-text-color
 
 [data-theme="dark"]
   .root, .root--folded
